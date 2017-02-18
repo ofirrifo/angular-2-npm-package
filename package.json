@@ -1,14 +1,21 @@
 {
   "name": "ng-2-npm-package",
   "version": "1.0.0",
-  "description": "",
+  "description": "A starter for create angular 2 npm package",
   "main": "index.js",
   "scripts": {
     "server": "webpack-dev-server --inline --progress --port 3000 --content-base src --open",
     "start": "npm run server"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "Anfular 2",
+    "Anfular",
+    "Anfular npm package",
+    "Webpack 2",
+    "Typescript 2",
+    "RxJS 5"
+  ],
+  "author": "Ofir Fridman",
   "license": "ISC",
   "dependencies": {
     "@angular/common": "~2.4.7",
