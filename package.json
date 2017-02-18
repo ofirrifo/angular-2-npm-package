@@ -1,7 +1,7 @@
 {
   "name": "ng-2-npm-package",
   "version": "1.0.0",
-  "description": "A starter for create angular 2 npm package",
+  "description": "A starter project to create angular 2 npm package",
   "main": "index.js",
   "scripts": {
     "server": "webpack-dev-server --inline --progress --port 3000 --content-base src --open",
@@ -16,7 +16,7 @@
     "RxJS 5"
   ],
   "author": "Ofir Fridman",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "@angular/common": "~2.4.7",
     "@angular/compiler ": "~2.4.7",
