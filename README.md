@@ -4,11 +4,11 @@ a ready to go angular 2 npm package.
 
 ## Prerequisites 
 - [node.js 6+](https://nodejs.org/en/) 
-- npm 4 +
+- [npm 4 +](https://www.npmjs.com/)
 - npm install -g webpack webpack-dev-server typescript
 
  ## Technology Stack
- - Angular 2
- - Typescript 2
- - Webpack 2
- - RxJS 5
+ - [Angular 2](https://angular.io/)
+ - [Typescript 2](https://www.typescriptlang.org/)
+ - [Webpack 2](https://webpack.js.org/)
+ - [RxJS 5](http://reactivex.io/rxjs/)
