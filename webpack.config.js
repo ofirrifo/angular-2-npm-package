@@ -1,20 +1,28 @@
-var webpack = require('webpack');
-var path = require('path');
+'use strict';
+
+const webpack = require('webpack');
+const path = require('path');
 
 module.exports = {
-    entry: './src/main.ts',
+    entry: {
+        polyfills: './src/polyfills.ts',
+        vendor: './src/vendor.ts',
+        main: './src/main.ts',
+    },
 
     output: {
         publicPath: '',
         path: path.resolve(__dirname, './dist'),
-        filename: '[name].js'
+        filename: '[name].js',
+        chunkFilename: '[id].chunk.js'
+
     },
 
-    module:{
-        rules:[
+    module: {
+        rules: [
             {
                 test: /\.ts$/,
-                use:{
+                use: {
                     loader: 'awesome-typescript-loader'
                 }
             }
@@ -30,12 +38,17 @@ module.exports = {
                 // your Angular Async Route paths relative to this root directory
             }
         ),
+
+        new webpack.optimize.CommonsChunkPlugin({
+            name: ['main', 'vendor', 'polyfills'],
+            minChunks: Infinity
+        })
     ],
 
 
     resolve: {
-        extensions: [ '.ts', '.js' ],
-        modules: [ path.resolve(__dirname, 'node_modules') ]
+        extensions: ['.ts', '.js'],
+        modules: [path.resolve(__dirname, 'node_modules')]
     },
 
 };
