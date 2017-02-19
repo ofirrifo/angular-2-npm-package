@@ -8,7 +8,7 @@ a ready to go angular 2 npm package.
 - `npm install -g webpack webpack-dev-server typescript`
 
  ## Technology Stack
- - [Angular 2](https://angular.io/)
- - [Typescript 2](https://www.typescriptlang.org/)
- - [Webpack 2](https://webpack.js.org/)
- - [RxJS 5](http://reactivex.io/rxjs/)
+ - [Angular 2.x](https://angular.io/)
+ - [Typescript 2.x](https://www.typescriptlang.org/)
+ - [Webpack 2.x](https://webpack.js.org/)
+ - [RxJS 5.x](http://reactivex.io/rxjs/)
