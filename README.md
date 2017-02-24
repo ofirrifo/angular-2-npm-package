@@ -17,5 +17,3 @@ a ready to go angular 2 npm package.
  - [Webpack 2.x](https://webpack.js.org/)
  - [RxJS 5.x](http://reactivex.io/rxjs/)
  - [TSLint](https://palantir.github.io/tslint/)
- 
- 
