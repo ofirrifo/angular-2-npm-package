@@ -7,12 +7,13 @@ a ready to go angular 2 npm package.
 - [npm 4 +](https://www.npmjs.com/) `npm -v`
 - `npm install -g webpack webpack-dev-server typescript`
 
+ ##  How to start
+ - `npm start` to start project run
+ - `bpm run build` create dist directory for production
+
  ## Technology Stack
  - [Angular 2.x](https://angular.io/)
  - [Typescript 2.x](https://www.typescriptlang.org/)
  - [Webpack 2.x](https://webpack.js.org/)
  - [RxJS 5.x](http://reactivex.io/rxjs/)
  
- ##  How to start
- - `npm start` to start project run
- - `bpm run build` create dist directory for production
