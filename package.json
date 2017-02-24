@@ -19,6 +19,10 @@
   ],
   "author": "Ofir Fridman",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ofirrifo/angular-2-npm-package"
+  },
   "dependencies": {
     "@angular/common": "~2.4.8",
     "@angular/compiler ": "~2.4.8",
