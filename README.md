@@ -14,6 +14,7 @@ a ready to go angular 2 npm package.
  ## Technology Stack
  - [Angular 2.x](https://angular.io/)
  - [Typescript 2.x](https://www.typescriptlang.org/)
+ - [Sass](http://sass-lang.com/)
  - [Webpack 2.x](https://webpack.js.org/)
  - [RxJS 5.x](http://reactivex.io/rxjs/)
  - [TSLint](https://palantir.github.io/tslint/)
