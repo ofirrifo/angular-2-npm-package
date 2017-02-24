@@ -8,7 +8,7 @@ a ready to go angular 2 npm package.
 - `npm install -g webpack webpack-dev-server typescript`
 
  ##  How to start
- - `npm start` to start project run
+ - `npm start` to start the project
  - `bpm run build` create dist directory for production
 
  ## Technology Stack
