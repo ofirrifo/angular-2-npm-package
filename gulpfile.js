@@ -15,6 +15,7 @@ const paths = {
   all: "./npm-modules/**/*.*",
   temp: "./temp",
   sass: "./temp/**/*.scss",
+  css: "./temp/**/*.css",
   ts: "./temp/**/*.ts"
 };
 
@@ -22,7 +23,15 @@ gulp.task('build-clean', function () {
   return del(paths.temp);
 });
 
-gulp.task('sass', function () {
+gulp.task('build-rename', function () {
+  return gulp.src(paths.css)
+    .pipe(rename(function (path) {
+      path.extname = ".scss"
+    }))
+    .pipe(gulp.dest(sameFolder));
+});
+
+gulp.task('build-sass', function () {
   return gulp.src(paths.sass)
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer({
@@ -33,14 +42,14 @@ gulp.task('sass', function () {
     .pipe(gulp.dest(sameFolder));
 });
 
-gulp.task('inline', () => {
+gulp.task('build-inline', () => {
   return gulp.src(paths.ts)
     .pipe(inlineNg2Template({ useRelativePaths:true}))
     .pipe(gulp.dest(sameFolder));
 });
 
 
-gulp.task('copy-npm-modules', () => {
+gulp.task('build-copy-npm-modules', () => {
   return gulp.src(paths.all)
     .pipe(gulp.dest(paths.temp));
 });
@@ -48,9 +57,10 @@ gulp.task('copy-npm-modules', () => {
 gulp.task('build', () => {
   runSequence(
     'build-clean',
-    'copy-npm-modules',
-    'sass',
-    'inline'
+    'build-copy-npm-modules',
+    'build-sass',
+    'build-rename',
+    'build-inline'
   );
 });
 
