@@ -16,7 +16,6 @@ const paths = {
 
 gulp.task('build-clean', function () {
   return del(paths.temp);
-
 });
 
 gulp.task('sass', function () {
