@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "A starter project to create angular 2 npm package",
   "main": "index.js",
+  "typings": "dist/index.d.ts",
   "scripts": {
     "prebuild": "rimraf dist",
-    "build": "tsc --rootDir ./npm-modules --outDir dist",
+    "build": "tsc --rootDir npm-modules --outDir dist --declaration",
     "server": "webpack-dev-server --inline --progress --port 3000 --content-base src --open",
     "start": "npm run server"
   },
@@ -23,7 +24,8 @@
     "type": "git",
     "url": "https://github.com/ofirrifo/angular-2-npm-package"
   },
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "@angular/common": "~2.4.8",
     "@angular/compiler ": "~2.4.8",
     "@angular/core": "~2.4.8",
@@ -32,9 +34,7 @@
     "core-js": "~2.4.1",
     "ie-shim": "~0.1.0",
     "rxjs": "~5.2.0",
-    "zone.js": "~0.7.7"
-  },
-  "devDependencies": {
+    "zone.js": "~0.7.7",
     "@types/node": "^7.0.5",
     "angular2-template-loader": "^0.6.2",
     "autoprefixer": "^6.7.5",
