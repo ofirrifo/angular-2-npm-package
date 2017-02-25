@@ -10,6 +10,10 @@ a ready to go angular 2 npm package.
  ##  How to start
  - `npm start` to start the project
  - `bpm run build` create dist directory for production
+ 
+ ## A
+ - under `npm-modules` folder write your code that will use as npm package
+ - under `src` folder it used to test our new npm module
 
  ## Technology Stack
  - [Angular 2.x](https://angular.io/)
