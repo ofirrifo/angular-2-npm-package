@@ -6,12 +6,14 @@ const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
 const cleanCSS = require('gulp-clean-css');
 const runSequence = require('run-sequence');
+const inlineNg2Template = require('gulp-inline-ng2-template');
 
 
 const paths = {
   all: "./npm-modules/**/*.*",
   temp: "./temp",
-  sass:"./temp/**/*.scss"
+  sass: "./temp/**/*.scss",
+  ts: "./temp/**/*.ts"
 };
 
 gulp.task('build-clean', function () {
@@ -29,6 +31,12 @@ gulp.task('sass', function () {
     .pipe(gulp.dest(sameFolder));
 });
 
+gulp.task('inline', () => {
+  return gulp.src(paths.ts)
+    .pipe(inlineNg2Template({ useRelativePaths:true}))
+    .pipe(gulp.dest(sameFolder));
+});
+
 
 gulp.task('copy-npm-modules', () => {
   return gulp.src(paths.all)
@@ -39,7 +47,8 @@ gulp.task('build', () => {
   runSequence(
     'build-clean',
     'copy-npm-modules',
-    'sass'
+    'sass',
+    'inline'
   );
 });
 
