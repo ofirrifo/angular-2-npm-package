@@ -1,14 +1,30 @@
 {
-    "compilerOptions": {
-        "target": "es5",
-        "module": "commonjs",
-        "moduleResolution": "node",
-        "sourceMap": true,
-        "emitDecoratorMetadata": true,
-        "experimentalDecorators": true,
-        "lib": [ "es2015", "dom" ],
-        "noImplicitAny": true,
-        "suppressImplicitAnyIndexErrors": true,
-        "types": ["node"]
-    }
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "removeComments": false,
+    "outDir": "dist",
+    "rootDir": "npm-modules",
+    "declaration": true,
+    "lib": [
+      "es2015",
+      "dom"
+    ],
+    "noImplicitAny": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "types": [
+      "node"
+    ]
+  },
+  "include": [
+    "npm-modules/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "src"
+  ]
 }
