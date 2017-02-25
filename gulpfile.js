@@ -7,6 +7,8 @@ const autoprefixer = require('gulp-autoprefixer');
 const cleanCSS = require('gulp-clean-css');
 const runSequence = require('run-sequence');
 const inlineNg2Template = require('gulp-inline-ng2-template');
+const rename = require("gulp-rename");
+
 
 
 const paths = {
