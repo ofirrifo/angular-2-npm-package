@@ -6,7 +6,9 @@
   "typings": "dist/index.d.ts",
   "scripts": {
     "prebuild": "rimraf dist",
-    "build": "tsc --rootDir npm-modules --outDir dist --declaration",
+    "build": "gulp build && npm run tsc",
+    "postbuild":"rimraf temp",
+    "tsc": "tsc --rootDir npm-modules --outDir dist --declaration",
     "server": "webpack-dev-server --inline --progress --port 3000 --content-base src --open",
     "start": "npm run server"
   },
