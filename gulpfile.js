@@ -9,8 +9,6 @@ const runSequence = require('run-sequence');
 const inlineNg2Template = require('gulp-inline-ng2-template');
 const rename = require("gulp-rename");
 
-
-
 const paths = {
   all: "./npm-modules/**/*.*",
   tmp: "./tmp",
