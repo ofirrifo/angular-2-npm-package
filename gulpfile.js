@@ -13,14 +13,14 @@ const rename = require("gulp-rename");
 
 const paths = {
   all: "./npm-modules/**/*.*",
-  temp: "./temp",
-  sass: "./temp/**/*.scss",
-  css: "./temp/**/*.css",
-  ts: "./temp/**/*.ts"
+  tmp: "./tmp",
+  sass: "./tmp/**/*.scss",
+  css: "./tmp/**/*.css",
+  ts: "./tmp/**/*.ts"
 };
 
 gulp.task('build-clean', function () {
-  return del(paths.temp);
+  return del(paths.tmp);
 });
 
 gulp.task('build-rename', function () {
@@ -51,7 +51,7 @@ gulp.task('build-inline', () => {
 
 gulp.task('build-copy-npm-modules', () => {
   return gulp.src(paths.all)
-    .pipe(gulp.dest(paths.temp));
+    .pipe(gulp.dest(paths.tmp));
 });
 
 gulp.task('build', () => {

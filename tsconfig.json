@@ -21,7 +21,7 @@
     ]
   },
   "include": [
-    "npm-modules/**/*.ts"
+    "tmp/**/*.ts"
   ],
   "exclude": [
     "node_modules",
